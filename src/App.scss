@@ -1,0 +1,54 @@
+#appContainer {
+  user-select: none;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+
+  #filterPanel {
+    position: absolute;
+    top: 10px;
+    display: flex;
+    box-sizing: border-box;
+    padding: 15px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: grey;
+
+    .albumCover {
+      height: 100px;
+      width: 100px;
+      display: flex;
+      cursor: pointer;
+      transition: transform 0.2s;
+      background-color: black;
+      color: white;
+
+      &:hover {
+        transform: scale(0.95);
+      }
+
+      &:active {
+        transform: scale(0.95);
+      }
+    }
+
+    .skipped {
+      filter: grayscale(100%) blur(1px);
+    }
+  }
+
+  #result {
+    height: 50px;
+    font-size: 70px;
+    text-align: center;
+  }
+
+  #bottomText {
+    position: absolute;
+    bottom: 10px;
+    font-size: 20px;
+  }
+}
