@@ -125,7 +125,7 @@ const App = () => {
       onClick={() => give()}
       style={{backgroundColor: bgColor, cursor: skips.includes(false) ? 'pointer' : 'not-allowed'}}
     >
-      <div id='filterPanel' style={{cursor: 'auto'}}>
+      <div id='filterPanel' style={{cursor: 'auto'}} onClick={(e) => e.stopPropagation()}>
         {albums?.map((elem, i) => (
           <div
             key={i}
