@@ -14,14 +14,16 @@ const albums = [
     backColor: 'rgb(255, 170, 1)',
     color: 'black',
     songs: ['New Born', 'Bliss', 'Space Dementia', 'Hyper Music', 'Plug in Baby',
-      'Citizen Erased', 'Micro Cuts', 'Screenager', 'Feeling Good', 'Megalomania', 'Futurism'],
+      'Citizen Erased', 'Micro Cuts', 'Screenager', 'Feeling Good',
+      'Megalomania', 'Futurism'],
     img: 'origin'
   },
   {
     name: 'Hullabaloo Soundtrack',
     backColor: 'rgb(1, 99, 63)',
     color: 'black',
-    songs: ['Yes Please', 'Map of Your Head', 'Nature_1', 'Ashamed', 'The Gallery'],
+    songs: ['Yes Please', 'Map of Your Head', 'Nature_1', 'Ashamed',
+      'The Gallery', 'Hyper Chondriac Music'],
     img: 'hullabaloo'
   },
   {
@@ -29,7 +31,8 @@ const albums = [
     backColor: 'rgb(203, 204, 203)',
     color: 'black',
     songs: ['Apocalypse Please', 'Time is Running Out', 'Hysteria', 'Blackout',
-      'The Small Print', 'Thoughts of a Dying Atheist', 'Fury'],
+      'Butterflies and Hurricanes', 'The Small Print', 'Thoughts of a Dying Atheist',
+      'Ruled by Secrecy', 'Fury'],
     img: 'absolution'
   },
   {
@@ -37,14 +40,16 @@ const albums = [
     backColor: 'rgb(195, 77, 31)',
     color: 'lightgray',
     songs: ['Take a Bow', 'Supermassive Black Hole', 'Map of the Problematique',
-      'Soldier\'s Poem', 'Assassin', 'Exo-Politics', 'Knights of Cydonia'],
+      'Soldier\'s Poem', 'Assassin', 'Exo-Politics', 'City of Delusion',
+      'Knights of Cydonia'],
     img: 'revelations'
   },
   {
     name: 'The Resistance',
     backColor: 'rgb(77, 89, 194)',
     color: 'black',
-    songs: ['Uprising', 'Undisclosed Desires', 'Unnatural Selection', 'MK Ultra', 'Exogeneis'],
+    songs: ['Uprising', 'Undisclosed Desires', 'Unnatural Selection', 'MK Ultra',
+      'Exogeneis'],
     img: 'resistance'
   },
   {
@@ -66,16 +71,19 @@ const albums = [
     name: 'Simulation Theory',
     backColor: 'rgb(210, 138, 183)',
     color: 'black',
-    songs: ['Algorithm', 'The Dark Side', 'Pressure', 'Break It To Me',
+    songs: ['Algorithm', 'The Dark Side', 'Pressure', 'Propaganda', 'Break It To Me',
       'Something Human', 'Thought Contagion', 'Get up and Fight', 'Blockades', 'The Void',
-      'Algorithm (Alternate Reality)', 'The Dark Side (Alternate Reality)', 'The Void (Acoustic)'],
+      'Algorithm (Alternate Reality)', 'The Dark Side (Alternate Reality)',
+      'The Void (Acoustic)'],
     img: 'simulation'
   },
   {
     name: 'Will Of The People',
     backColor: 'rgb(254, 210, 154)',
     color: 'black',
-    songs: ['Will Of The People', 'Compliance', 'Won\'t Stand Down', 'Kill Or Be Killed'],
+    songs: ['Will Of The People', 'Compliance', 'Liberation', 'Won\'t Stand Down',
+      'Ghosts (How Can I Move On)', 'Kill Or Be Killed', 'Verona', 'Euphoria',
+      'We Are Fucking Fucked'],
     img: 'will'
   }
 ]
@@ -148,7 +156,10 @@ const App = () => {
         </div>
       </div>
       <div id='result' style={{color: textColor}}>{resultText}</div>
-      <div id='bottomText' style={{color: textColor}}>Result copied to clipboard</div>
+      {
+        resultText !== 'Click to get good music' &&
+        <div id='bottomText' style={{color: textColor}}>Result copied to clipboard</div>
+      }
     </div>
   )
 }
